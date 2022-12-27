@@ -1,0 +1,3019 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="image_input" output_port_id="image_input:0" />
+		<IR name="image_input" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="image_input" output_port_id="image_input:0" />
+		<IR name="image_input" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/batchnorm/mul_1_copy" output_port_id="Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="Conv/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv/Conv2D/ReadVariableOp" output_port_id="Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="Conv/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv/Conv2D" output_port_id="Conv/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/batchnorm/mul_1" output_port_id="Conv/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/batchnorm/sub" output_port_id="Conv/BatchNorm/batchnorm/sub:0" />
+		<IR name="Conv/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/batchnorm/sub" output_port_id="Conv/BatchNorm/batchnorm/sub:0" />
+		<IR name="Conv/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/batchnorm/add_1" output_port_id="Conv/BatchNorm/batchnorm/add_1:0" />
+		<IR name="Conv/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/batchnorm/add_1" output_port_id="Conv/BatchNorm/batchnorm/add_1:0" />
+		<IR name="Conv/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation/multiply/mul" output_port_id="activation/multiply/mul:0" />
+		<IR name="activation/multiply/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation/multiply/mul" output_port_id="activation/multiply/mul:0" />
+		<IR name="activation/multiply/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/Conv/depthwise" output_port_id="expanded_conv/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape/Shape" output_port_id="reshape/Shape:0" />
+		<IR name="reshape/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape/Shape" output_port_id="reshape/Shape:0" />
+		<IR name="reshape/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice/stack" output_port_id="reshape/strided_slice/stack:0" />
+		<IR name="reshape/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice/stack" output_port_id="reshape/strided_slice/stack:0" />
+		<IR name="reshape/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice/stack_1" output_port_id="reshape/strided_slice/stack_1:0" />
+		<IR name="reshape/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice/stack_1" output_port_id="reshape/strided_slice/stack_1:0" />
+		<IR name="reshape/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice/stack_2" output_port_id="reshape/strided_slice/stack_2:0" />
+		<IR name="reshape/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice/stack_2" output_port_id="reshape/strided_slice/stack_2:0" />
+		<IR name="reshape/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice" output_port_id="reshape/strided_slice:0" />
+		<IR name="reshape/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape/strided_slice" output_port_id="reshape/strided_slice:0" />
+		<IR name="reshape/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape/Reshape/Cast_1" output_port_id="reshape/Reshape/shape:0" />
+		<IR name="reshape/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape/Reshape/shape" output_port_id="reshape/Reshape/shape:0" />
+		<IR name="reshape/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape/Reshape/Transpose" output_port_id="reshape/Reshape:0" />
+		<IR name="reshape/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape/Reshape" output_port_id="reshape/Reshape:0" />
+		<IR name="reshape/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Relu/Relu" output_port_id="expanded_conv/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Relu/Relu" output_port_id="expanded_conv/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_2/mul" output_port_id="activation_2/mul:0" />
+		<IR name="activation_2/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_2/mul" output_port_id="activation_2/mul:0" />
+		<IR name="activation_2/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Mul/mul" output_port_id="expanded_conv/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Mul/mul" output_port_id="expanded_conv/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/Conv2D" output_port_id="expanded_conv/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_1/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_1/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_1/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_1/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/Conv2D" output_port_id="expanded_conv_1/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_1/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_1/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_1/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_1/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_1/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_1/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_1/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_1/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_1/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_1/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_1/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_3/Relu" output_port_id="activation_3/Relu:0" />
+		<IR name="activation_3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_3/Relu" output_port_id="activation_3/Relu:0" />
+		<IR name="activation_3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_1/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_1/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_1/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_1/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/Conv/depthwise" output_port_id="expanded_conv_1/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_1/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_1/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_1/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_1/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_1/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_1/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_1/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_1/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_1/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_1/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_1/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_4/Relu" output_port_id="activation_4/Relu:0" />
+		<IR name="activation_4/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_4/Relu" output_port_id="activation_4/Relu:0" />
+		<IR name="activation_4/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_1/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_1/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_1/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_1/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/Conv2D" output_port_id="expanded_conv_1/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_1/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_1/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_1/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_1/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_1/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_1/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_1/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_1/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_1/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_1/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_1/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_2/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_2/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_2/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_2/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/Conv2D" output_port_id="expanded_conv_2/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_2/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_2/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_2/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_2/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_2/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_2/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_2/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_2/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_2/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_2/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_2/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_5/Relu" output_port_id="activation_5/Relu:0" />
+		<IR name="activation_5/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_5/Relu" output_port_id="activation_5/Relu:0" />
+		<IR name="activation_5/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_2/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_2/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_2/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_2/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/Conv/depthwise" output_port_id="expanded_conv_2/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_2/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_2/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_2/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_2/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_2/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_2/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_2/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_2/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_2/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_2/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_2/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_6/Relu" output_port_id="activation_6/Relu:0" />
+		<IR name="activation_6/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_6/Relu" output_port_id="activation_6/Relu:0" />
+		<IR name="activation_6/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_2/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_2/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_2/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_2/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/Conv2D" output_port_id="expanded_conv_2/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_2/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_2/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_2/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_2/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_2/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_2/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_2/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_2/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_2/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_2/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_2/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/Add/add" output_port_id="expanded_conv_2/Add/add:0" />
+		<IR name="expanded_conv_2/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_2/Add/add" output_port_id="expanded_conv_2/Add/add:0" />
+		<IR name="expanded_conv_2/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_3/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_3/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/Conv2D" output_port_id="expanded_conv_3/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_3/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_3/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_3/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_3/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_3/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_3/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_3/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_3/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_3/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_3/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_3/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_7/multiply_1/mul" output_port_id="activation_7/multiply_1/mul:0" />
+		<IR name="activation_7/multiply_1/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_7/multiply_1/mul" output_port_id="activation_7/multiply_1/mul:0" />
+		<IR name="activation_7/multiply_1/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_3/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_3/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/Conv/depthwise" output_port_id="expanded_conv_3/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_3/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_3/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_3/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_3/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_3/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_3/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_3/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_3/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_3/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_3/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_3/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_3/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_3/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_3/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_3/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_1/Shape" output_port_id="reshape_1/Shape:0" />
+		<IR name="reshape_1/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_1/Shape" output_port_id="reshape_1/Shape:0" />
+		<IR name="reshape_1/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice/stack" output_port_id="reshape_1/strided_slice/stack:0" />
+		<IR name="reshape_1/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice/stack" output_port_id="reshape_1/strided_slice/stack:0" />
+		<IR name="reshape_1/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice/stack_1" output_port_id="reshape_1/strided_slice/stack_1:0" />
+		<IR name="reshape_1/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice/stack_1" output_port_id="reshape_1/strided_slice/stack_1:0" />
+		<IR name="reshape_1/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice/stack_2" output_port_id="reshape_1/strided_slice/stack_2:0" />
+		<IR name="reshape_1/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice/stack_2" output_port_id="reshape_1/strided_slice/stack_2:0" />
+		<IR name="reshape_1/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice" output_port_id="reshape_1/strided_slice:0" />
+		<IR name="reshape_1/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_1/strided_slice" output_port_id="reshape_1/strided_slice:0" />
+		<IR name="reshape_1/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_1/Reshape/Cast_1" output_port_id="reshape_1/Reshape/shape:0" />
+		<IR name="reshape_1/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_1/Reshape/shape" output_port_id="reshape_1/Reshape/shape:0" />
+		<IR name="reshape_1/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_1/Reshape/Transpose" output_port_id="reshape_1/Reshape:0" />
+		<IR name="reshape_1/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_1/Reshape" output_port_id="reshape_1/Reshape:0" />
+		<IR name="reshape_1/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_3/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_3/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_3/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_3/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_3/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_3/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_9/mul" output_port_id="activation_9/mul:0" />
+		<IR name="activation_9/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_9/mul" output_port_id="activation_9/mul:0" />
+		<IR name="activation_9/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Mul/mul" output_port_id="expanded_conv_3/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Mul/mul" output_port_id="expanded_conv_3/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_3/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_3/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_3/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_3/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/Conv2D" output_port_id="expanded_conv_3/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_3/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_3/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_3/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_3/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_3/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_3/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_3/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_3/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_3/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_3/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_3/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_4/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_4/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/Conv2D" output_port_id="expanded_conv_4/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_4/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_4/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_4/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_4/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_4/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_4/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_4/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_4/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_4/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_4/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_4/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_10/multiply_3/mul" output_port_id="activation_10/multiply_3/mul:0" />
+		<IR name="activation_10/multiply_3/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_10/multiply_3/mul" output_port_id="activation_10/multiply_3/mul:0" />
+		<IR name="activation_10/multiply_3/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_4/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_4/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/Conv/depthwise" output_port_id="expanded_conv_4/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_4/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_4/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_4/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_4/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_4/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_4/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_4/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_4/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_4/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_4/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_4/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_4/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_4/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_4/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_4/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_2/Shape" output_port_id="reshape_2/Shape:0" />
+		<IR name="reshape_2/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_2/Shape" output_port_id="reshape_2/Shape:0" />
+		<IR name="reshape_2/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice/stack" output_port_id="reshape_2/strided_slice/stack:0" />
+		<IR name="reshape_2/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice/stack" output_port_id="reshape_2/strided_slice/stack:0" />
+		<IR name="reshape_2/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice/stack_1" output_port_id="reshape_2/strided_slice/stack_1:0" />
+		<IR name="reshape_2/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice/stack_1" output_port_id="reshape_2/strided_slice/stack_1:0" />
+		<IR name="reshape_2/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice/stack_2" output_port_id="reshape_2/strided_slice/stack_2:0" />
+		<IR name="reshape_2/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice/stack_2" output_port_id="reshape_2/strided_slice/stack_2:0" />
+		<IR name="reshape_2/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice" output_port_id="reshape_2/strided_slice:0" />
+		<IR name="reshape_2/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_2/strided_slice" output_port_id="reshape_2/strided_slice:0" />
+		<IR name="reshape_2/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_2/Reshape/Cast_1" output_port_id="reshape_2/Reshape/shape:0" />
+		<IR name="reshape_2/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_2/Reshape/shape" output_port_id="reshape_2/Reshape/shape:0" />
+		<IR name="reshape_2/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_2/Reshape/Transpose" output_port_id="reshape_2/Reshape:0" />
+		<IR name="reshape_2/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_2/Reshape" output_port_id="reshape_2/Reshape:0" />
+		<IR name="reshape_2/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_4/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_4/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_4/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_4/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_4/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_4/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_12/mul" output_port_id="activation_12/mul:0" />
+		<IR name="activation_12/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_12/mul" output_port_id="activation_12/mul:0" />
+		<IR name="activation_12/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Mul/mul" output_port_id="expanded_conv_4/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Mul/mul" output_port_id="expanded_conv_4/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_4/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_4/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_4/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_4/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/Conv2D" output_port_id="expanded_conv_4/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_4/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_4/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_4/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_4/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_4/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_4/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_4/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_4/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_4/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_4/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_4/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/Add/add" output_port_id="expanded_conv_4/Add/add:0" />
+		<IR name="expanded_conv_4/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_4/Add/add" output_port_id="expanded_conv_4/Add/add:0" />
+		<IR name="expanded_conv_4/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_5/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_5/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/Conv2D" output_port_id="expanded_conv_5/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_5/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_5/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_5/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_5/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_5/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_5/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_5/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_5/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_5/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_5/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_5/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_13/multiply_5/mul" output_port_id="activation_13/multiply_5/mul:0" />
+		<IR name="activation_13/multiply_5/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_13/multiply_5/mul" output_port_id="activation_13/multiply_5/mul:0" />
+		<IR name="activation_13/multiply_5/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_5/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_5/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/Conv/depthwise" output_port_id="expanded_conv_5/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_5/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_5/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_5/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_5/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_5/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_5/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_5/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_5/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_5/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_5/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_5/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_5/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_5/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_5/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_5/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_3/Shape" output_port_id="reshape_3/Shape:0" />
+		<IR name="reshape_3/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_3/Shape" output_port_id="reshape_3/Shape:0" />
+		<IR name="reshape_3/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice/stack" output_port_id="reshape_3/strided_slice/stack:0" />
+		<IR name="reshape_3/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice/stack" output_port_id="reshape_3/strided_slice/stack:0" />
+		<IR name="reshape_3/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice/stack_1" output_port_id="reshape_3/strided_slice/stack_1:0" />
+		<IR name="reshape_3/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice/stack_1" output_port_id="reshape_3/strided_slice/stack_1:0" />
+		<IR name="reshape_3/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice/stack_2" output_port_id="reshape_3/strided_slice/stack_2:0" />
+		<IR name="reshape_3/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice/stack_2" output_port_id="reshape_3/strided_slice/stack_2:0" />
+		<IR name="reshape_3/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice" output_port_id="reshape_3/strided_slice:0" />
+		<IR name="reshape_3/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_3/strided_slice" output_port_id="reshape_3/strided_slice:0" />
+		<IR name="reshape_3/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_3/Reshape/Cast_1" output_port_id="reshape_3/Reshape/shape:0" />
+		<IR name="reshape_3/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_3/Reshape/shape" output_port_id="reshape_3/Reshape/shape:0" />
+		<IR name="reshape_3/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_3/Reshape/Transpose" output_port_id="reshape_3/Reshape:0" />
+		<IR name="reshape_3/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_3/Reshape" output_port_id="reshape_3/Reshape:0" />
+		<IR name="reshape_3/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_5/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_5/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_5/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_5/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_5/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_5/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_15/mul" output_port_id="activation_15/mul:0" />
+		<IR name="activation_15/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_15/mul" output_port_id="activation_15/mul:0" />
+		<IR name="activation_15/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Mul/mul" output_port_id="expanded_conv_5/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Mul/mul" output_port_id="expanded_conv_5/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_5/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_5/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_5/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_5/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/Conv2D" output_port_id="expanded_conv_5/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_5/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_5/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_5/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_5/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_5/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_5/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_5/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_5/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_5/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_5/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_5/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/Add/add" output_port_id="expanded_conv_5/Add/add:0" />
+		<IR name="expanded_conv_5/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_5/Add/add" output_port_id="expanded_conv_5/Add/add:0" />
+		<IR name="expanded_conv_5/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_6/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_6/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/Conv2D" output_port_id="expanded_conv_6/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_6/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_6/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_6/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_6/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_6/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_6/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_6/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_6/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_6/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_6/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_6/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_16/multiply_7/mul" output_port_id="activation_16/multiply_7/mul:0" />
+		<IR name="activation_16/multiply_7/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_16/multiply_7/mul" output_port_id="activation_16/multiply_7/mul:0" />
+		<IR name="activation_16/multiply_7/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_6/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_6/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/Conv/depthwise" output_port_id="expanded_conv_6/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_6/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_6/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_6/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_6/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_6/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_6/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_6/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_6/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_6/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_6/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_6/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_6/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_6/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_6/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_6/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_4/Shape" output_port_id="reshape_4/Shape:0" />
+		<IR name="reshape_4/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_4/Shape" output_port_id="reshape_4/Shape:0" />
+		<IR name="reshape_4/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice/stack" output_port_id="reshape_4/strided_slice/stack:0" />
+		<IR name="reshape_4/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice/stack" output_port_id="reshape_4/strided_slice/stack:0" />
+		<IR name="reshape_4/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice/stack_1" output_port_id="reshape_4/strided_slice/stack_1:0" />
+		<IR name="reshape_4/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice/stack_1" output_port_id="reshape_4/strided_slice/stack_1:0" />
+		<IR name="reshape_4/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice/stack_2" output_port_id="reshape_4/strided_slice/stack_2:0" />
+		<IR name="reshape_4/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice/stack_2" output_port_id="reshape_4/strided_slice/stack_2:0" />
+		<IR name="reshape_4/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice" output_port_id="reshape_4/strided_slice:0" />
+		<IR name="reshape_4/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_4/strided_slice" output_port_id="reshape_4/strided_slice:0" />
+		<IR name="reshape_4/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_4/Reshape/Cast_1" output_port_id="reshape_4/Reshape/shape:0" />
+		<IR name="reshape_4/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_4/Reshape/shape" output_port_id="reshape_4/Reshape/shape:0" />
+		<IR name="reshape_4/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_4/Reshape/Transpose" output_port_id="reshape_4/Reshape:0" />
+		<IR name="reshape_4/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_4/Reshape" output_port_id="reshape_4/Reshape:0" />
+		<IR name="reshape_4/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_6/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_6/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_6/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_6/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_6/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_6/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_18/mul" output_port_id="activation_18/mul:0" />
+		<IR name="activation_18/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_18/mul" output_port_id="activation_18/mul:0" />
+		<IR name="activation_18/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Mul/mul" output_port_id="expanded_conv_6/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Mul/mul" output_port_id="expanded_conv_6/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_6/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_6/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_6/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_6/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/Conv2D" output_port_id="expanded_conv_6/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_6/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_6/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_6/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_6/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_6/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_6/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_6/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_6/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_6/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_6/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_6/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_7/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_7/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/Conv2D" output_port_id="expanded_conv_7/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_7/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_7/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_7/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_7/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_7/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_7/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_7/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_7/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_7/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_7/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_7/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_19/multiply_9/mul" output_port_id="activation_19/multiply_9/mul:0" />
+		<IR name="activation_19/multiply_9/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_19/multiply_9/mul" output_port_id="activation_19/multiply_9/mul:0" />
+		<IR name="activation_19/multiply_9/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_7/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_7/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/Conv/depthwise" output_port_id="expanded_conv_7/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_7/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_7/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_7/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_7/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_7/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_7/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_7/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_7/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_7/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_7/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_7/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_7/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_7/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_7/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_7/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_5/Shape" output_port_id="reshape_5/Shape:0" />
+		<IR name="reshape_5/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_5/Shape" output_port_id="reshape_5/Shape:0" />
+		<IR name="reshape_5/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice/stack" output_port_id="reshape_5/strided_slice/stack:0" />
+		<IR name="reshape_5/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice/stack" output_port_id="reshape_5/strided_slice/stack:0" />
+		<IR name="reshape_5/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice/stack_1" output_port_id="reshape_5/strided_slice/stack_1:0" />
+		<IR name="reshape_5/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice/stack_1" output_port_id="reshape_5/strided_slice/stack_1:0" />
+		<IR name="reshape_5/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice/stack_2" output_port_id="reshape_5/strided_slice/stack_2:0" />
+		<IR name="reshape_5/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice/stack_2" output_port_id="reshape_5/strided_slice/stack_2:0" />
+		<IR name="reshape_5/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice" output_port_id="reshape_5/strided_slice:0" />
+		<IR name="reshape_5/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_5/strided_slice" output_port_id="reshape_5/strided_slice:0" />
+		<IR name="reshape_5/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_5/Reshape/Cast_1" output_port_id="reshape_5/Reshape/shape:0" />
+		<IR name="reshape_5/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_5/Reshape/shape" output_port_id="reshape_5/Reshape/shape:0" />
+		<IR name="reshape_5/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_5/Reshape/Transpose" output_port_id="reshape_5/Reshape:0" />
+		<IR name="reshape_5/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_5/Reshape" output_port_id="reshape_5/Reshape:0" />
+		<IR name="reshape_5/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_7/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_7/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_7/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_7/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_7/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_7/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_21/mul" output_port_id="activation_21/mul:0" />
+		<IR name="activation_21/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_21/mul" output_port_id="activation_21/mul:0" />
+		<IR name="activation_21/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Mul/mul" output_port_id="expanded_conv_7/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Mul/mul" output_port_id="expanded_conv_7/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_7/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_7/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_7/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_7/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/Conv2D" output_port_id="expanded_conv_7/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_7/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_7/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_7/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_7/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_7/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_7/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_7/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_7/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_7/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_7/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_7/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/Add/add" output_port_id="expanded_conv_7/Add/add:0" />
+		<IR name="expanded_conv_7/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_7/Add/add" output_port_id="expanded_conv_7/Add/add:0" />
+		<IR name="expanded_conv_7/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_8/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_8/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/Conv2D" output_port_id="expanded_conv_8/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_8/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_8/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_8/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_8/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_8/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_8/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_8/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_8/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_8/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_8/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_8/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_22/multiply_11/mul" output_port_id="activation_22/multiply_11/mul:0" />
+		<IR name="activation_22/multiply_11/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_22/multiply_11/mul" output_port_id="activation_22/multiply_11/mul:0" />
+		<IR name="activation_22/multiply_11/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_8/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_8/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/Conv/depthwise" output_port_id="expanded_conv_8/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_8/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_8/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_8/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_8/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_8/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_8/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_8/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_8/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_8/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_8/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_8/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_8/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_8/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_8/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_8/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_6/Shape" output_port_id="reshape_6/Shape:0" />
+		<IR name="reshape_6/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_6/Shape" output_port_id="reshape_6/Shape:0" />
+		<IR name="reshape_6/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice/stack" output_port_id="reshape_6/strided_slice/stack:0" />
+		<IR name="reshape_6/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice/stack" output_port_id="reshape_6/strided_slice/stack:0" />
+		<IR name="reshape_6/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice/stack_1" output_port_id="reshape_6/strided_slice/stack_1:0" />
+		<IR name="reshape_6/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice/stack_1" output_port_id="reshape_6/strided_slice/stack_1:0" />
+		<IR name="reshape_6/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice/stack_2" output_port_id="reshape_6/strided_slice/stack_2:0" />
+		<IR name="reshape_6/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice/stack_2" output_port_id="reshape_6/strided_slice/stack_2:0" />
+		<IR name="reshape_6/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice" output_port_id="reshape_6/strided_slice:0" />
+		<IR name="reshape_6/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_6/strided_slice" output_port_id="reshape_6/strided_slice:0" />
+		<IR name="reshape_6/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_6/Reshape/Cast_1" output_port_id="reshape_6/Reshape/shape:0" />
+		<IR name="reshape_6/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_6/Reshape/shape" output_port_id="reshape_6/Reshape/shape:0" />
+		<IR name="reshape_6/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_6/Reshape/Transpose" output_port_id="reshape_6/Reshape:0" />
+		<IR name="reshape_6/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_6/Reshape" output_port_id="reshape_6/Reshape:0" />
+		<IR name="reshape_6/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_8/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_8/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_8/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_8/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_8/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_8/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_24/mul" output_port_id="activation_24/mul:0" />
+		<IR name="activation_24/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_24/mul" output_port_id="activation_24/mul:0" />
+		<IR name="activation_24/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Mul/mul" output_port_id="expanded_conv_8/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Mul/mul" output_port_id="expanded_conv_8/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_8/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_8/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_8/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_8/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/Conv2D" output_port_id="expanded_conv_8/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_8/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_8/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_8/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_8/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_8/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_8/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_8/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_8/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_8/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_8/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_8/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_9/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_9/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/Conv2D" output_port_id="expanded_conv_9/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_9/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_9/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_9/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_9/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_9/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_9/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_9/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_9/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_9/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_9/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_9/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_25/multiply_13/mul" output_port_id="activation_25/multiply_13/mul:0" />
+		<IR name="activation_25/multiply_13/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_25/multiply_13/mul" output_port_id="activation_25/multiply_13/mul:0" />
+		<IR name="activation_25/multiply_13/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_9/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_9/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/Conv/depthwise" output_port_id="expanded_conv_9/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_9/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_9/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_9/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_9/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_9/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_9/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_9/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_9/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_9/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_9/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_9/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_9/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_9/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_9/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_9/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_7/Shape" output_port_id="reshape_7/Shape:0" />
+		<IR name="reshape_7/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_7/Shape" output_port_id="reshape_7/Shape:0" />
+		<IR name="reshape_7/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice/stack" output_port_id="reshape_7/strided_slice/stack:0" />
+		<IR name="reshape_7/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice/stack" output_port_id="reshape_7/strided_slice/stack:0" />
+		<IR name="reshape_7/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice/stack_1" output_port_id="reshape_7/strided_slice/stack_1:0" />
+		<IR name="reshape_7/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice/stack_1" output_port_id="reshape_7/strided_slice/stack_1:0" />
+		<IR name="reshape_7/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice/stack_2" output_port_id="reshape_7/strided_slice/stack_2:0" />
+		<IR name="reshape_7/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice/stack_2" output_port_id="reshape_7/strided_slice/stack_2:0" />
+		<IR name="reshape_7/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice" output_port_id="reshape_7/strided_slice:0" />
+		<IR name="reshape_7/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_7/strided_slice" output_port_id="reshape_7/strided_slice:0" />
+		<IR name="reshape_7/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_7/Reshape/Cast_1" output_port_id="reshape_7/Reshape/shape:0" />
+		<IR name="reshape_7/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_7/Reshape/shape" output_port_id="reshape_7/Reshape/shape:0" />
+		<IR name="reshape_7/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_7/Reshape/Transpose" output_port_id="reshape_7/Reshape:0" />
+		<IR name="reshape_7/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_7/Reshape" output_port_id="reshape_7/Reshape:0" />
+		<IR name="reshape_7/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_9/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_9/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_9/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_9/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_9/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_9/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_27/mul" output_port_id="activation_27/mul:0" />
+		<IR name="activation_27/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_27/mul" output_port_id="activation_27/mul:0" />
+		<IR name="activation_27/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Mul/mul" output_port_id="expanded_conv_9/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Mul/mul" output_port_id="expanded_conv_9/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_9/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_9/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_9/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_9/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/Conv2D" output_port_id="expanded_conv_9/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_9/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_9/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_9/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_9/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_9/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_9/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_9/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_9/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_9/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_9/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_9/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/Add/add" output_port_id="expanded_conv_9/Add/add:0" />
+		<IR name="expanded_conv_9/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_9/Add/add" output_port_id="expanded_conv_9/Add/add:0" />
+		<IR name="expanded_conv_9/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_10/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/Conv2D/ReadVariableOp" output_port_id="expanded_conv_10/expand/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/expand/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/Conv2D" output_port_id="expanded_conv_10/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_10/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_10/expand/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_10/expand/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_10/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_10/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_10/expand/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_10/expand/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_10/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_10/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_10/expand/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_10/expand/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_28/multiply_15/mul" output_port_id="activation_28/multiply_15/mul:0" />
+		<IR name="activation_28/multiply_15/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_28/multiply_15/mul" output_port_id="activation_28/multiply_15/mul:0" />
+		<IR name="activation_28/multiply_15/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_10/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/Conv/depthwise/ReadVariableOp" output_port_id="expanded_conv_10/depthwise/Conv/depthwise/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/depthwise/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/Conv/depthwise" output_port_id="expanded_conv_10/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_10/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_10/depthwise/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_10/depthwise/Conv/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_10/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_10/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_10/depthwise/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_10/depthwise/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_10/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_10/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_10/depthwise/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_10/depthwise/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_10/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_10/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/AvgPool/Mean" output_port_id="expanded_conv_10/squeeze_excite/AvgPool/Mean:0" />
+		<IR name="expanded_conv_10/squeeze_excite/AvgPool/Mean" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_8/Shape" output_port_id="reshape_8/Shape:0" />
+		<IR name="reshape_8/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_8/Shape" output_port_id="reshape_8/Shape:0" />
+		<IR name="reshape_8/Shape" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice/stack" output_port_id="reshape_8/strided_slice/stack:0" />
+		<IR name="reshape_8/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice/stack" output_port_id="reshape_8/strided_slice/stack:0" />
+		<IR name="reshape_8/strided_slice/stack" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice/stack_1" output_port_id="reshape_8/strided_slice/stack_1:0" />
+		<IR name="reshape_8/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice/stack_1" output_port_id="reshape_8/strided_slice/stack_1:0" />
+		<IR name="reshape_8/strided_slice/stack_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice/stack_2" output_port_id="reshape_8/strided_slice/stack_2:0" />
+		<IR name="reshape_8/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice/stack_2" output_port_id="reshape_8/strided_slice/stack_2:0" />
+		<IR name="reshape_8/strided_slice/stack_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice" output_port_id="reshape_8/strided_slice:0" />
+		<IR name="reshape_8/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_8/strided_slice" output_port_id="reshape_8/strided_slice:0" />
+		<IR name="reshape_8/strided_slice" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="reshape_8/Reshape/Cast_1" output_port_id="reshape_8/Reshape/shape:0" />
+		<IR name="reshape_8/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_8/Reshape/shape" output_port_id="reshape_8/Reshape/shape:0" />
+		<IR name="reshape_8/Reshape/Cast_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="reshape_8/Reshape/Transpose" output_port_id="reshape_8/Reshape:0" />
+		<IR name="reshape_8/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="reshape_8/Reshape" output_port_id="reshape_8/Reshape:0" />
+		<IR name="reshape_8/Reshape/Transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_10/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/Conv2D" output_port_id="expanded_conv_10/squeeze_excite/Conv/Conv2D:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/Add" output_port_id="expanded_conv_10/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/BiasAdd" output_port_id="expanded_conv_10/squeeze_excite/Conv/BiasAdd:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_10/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Relu/Relu" output_port_id="expanded_conv_10/squeeze_excite/Relu/Relu:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/Conv2D:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd" output_port_id="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_30/mul" output_port_id="activation_30/mul:0" />
+		<IR name="activation_30/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_30/mul" output_port_id="activation_30/mul:0" />
+		<IR name="activation_30/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Mul/mul" output_port_id="expanded_conv_10/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Mul/mul" output_port_id="expanded_conv_10/squeeze_excite/Mul/mul:0" />
+		<IR name="expanded_conv_10/squeeze_excite/Mul/mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="expanded_conv_10/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/Conv2D/ReadVariableOp" output_port_id="expanded_conv_10/project/Conv2D/ReadVariableOp:0" />
+		<IR name="expanded_conv_10/project/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/Conv2D" output_port_id="expanded_conv_10/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_10/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/batchnorm/mul_1" output_port_id="expanded_conv_10/project/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="expanded_conv_10/project/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_10/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_10/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/batchnorm/sub" output_port_id="expanded_conv_10/project/BatchNorm/batchnorm/sub:0" />
+		<IR name="expanded_conv_10/project/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_10/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_10/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/batchnorm/add_1" output_port_id="expanded_conv_10/project/BatchNorm/batchnorm/add_1:0" />
+		<IR name="expanded_conv_10/project/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/Add/add" output_port_id="expanded_conv_10/Add/add:0" />
+		<IR name="expanded_conv_10/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="expanded_conv_10/Add/add" output_port_id="expanded_conv_10/Add/add:0" />
+		<IR name="expanded_conv_10/Add/add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/batchnorm/mul_1_copy" output_port_id="Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="Conv_1/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_1/Conv2D/ReadVariableOp" output_port_id="Conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="Conv_1/BatchNorm/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_1/Conv2D" output_port_id="Conv_1/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/batchnorm/mul_1" output_port_id="Conv_1/BatchNorm/batchnorm/mul_1:0" />
+		<IR name="Conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/batchnorm/sub" output_port_id="Conv_1/BatchNorm/batchnorm/sub:0" />
+		<IR name="Conv_1/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/batchnorm/sub" output_port_id="Conv_1/BatchNorm/batchnorm/sub:0" />
+		<IR name="Conv_1/BatchNorm/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/batchnorm/add_1" output_port_id="Conv_1/BatchNorm/batchnorm/add_1:0" />
+		<IR name="Conv_1/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/batchnorm/add_1" output_port_id="Conv_1/BatchNorm/batchnorm/add_1:0" />
+		<IR name="Conv_1/BatchNorm/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_31/multiply_17/mul" output_port_id="activation_31/multiply_17/mul:0" />
+		<IR name="activation_31/multiply_17/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="activation_31/multiply_17/mul" output_port_id="activation_31/multiply_17/mul:0" />
+		<IR name="activation_31/multiply_17/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_1_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_1_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_1_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_bn/batchnorm/add_1" output_port_id="conv_dw_pred_1_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/mul_1_copy" output_port_id="conv2d/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D/ReadVariableOp" output_port_id="conv2d/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D" output_port_id="sync_batch_normalization/batchnorm/mul_1:0" />
+		<IR name="conv2d/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/mul_1" output_port_id="sync_batch_normalization/batchnorm/mul_1:0" />
+		<IR name="conv2d/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/sub" output_port_id="sync_batch_normalization/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/sub" output_port_id="sync_batch_normalization/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/add_1" output_port_id="sync_batch_normalization/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/add_1" output_port_id="sync_batch_normalization/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu/LeakyRelu" output_port_id="leaky_re_lu/LeakyRelu:0" />
+		<IR name="leaky_re_lu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu/LeakyRelu" output_port_id="leaky_re_lu/LeakyRelu:0" />
+		<IR name="leaky_re_lu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_22/multiply_11/mul/Shape/Gathered" output_port_id="up_sampling2d/mul:0" />
+		<IR name="activation_22/multiply_11/mul/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d/mul" output_port_id="up_sampling2d/mul:0" />
+		<IR name="activation_22/multiply_11/mul/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="concatenate/concat" output_port_id="concatenate/concat:0" />
+		<IR name="concatenate/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concatenate/concat" output_port_id="concatenate/concat:0" />
+		<IR name="concatenate/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_2_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_2_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_2_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_bn/batchnorm/add_1" output_port_id="conv_dw_pred_2_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/mul_1_copy" output_port_id="conv2d_1/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D/ReadVariableOp" output_port_id="conv2d_1/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D" output_port_id="sync_batch_normalization_1/batchnorm/mul_1:0" />
+		<IR name="conv2d_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/mul_1" output_port_id="sync_batch_normalization_1/batchnorm/mul_1:0" />
+		<IR name="conv2d_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/sub" output_port_id="sync_batch_normalization_1/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/sub" output_port_id="sync_batch_normalization_1/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="sync_batch_normalization_1/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="sync_batch_normalization_1/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_1/LeakyRelu" output_port_id="leaky_re_lu_1/LeakyRelu:0" />
+		<IR name="leaky_re_lu_1/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_1/LeakyRelu" output_port_id="leaky_re_lu_1/LeakyRelu:0" />
+		<IR name="leaky_re_lu_1/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="activation_7/multiply_1/mul/Shape/Gathered" output_port_id="up_sampling2d_1/mul:0" />
+		<IR name="activation_7/multiply_1/mul/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/mul" output_port_id="up_sampling2d_1/mul:0" />
+		<IR name="activation_7/multiply_1/mul/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d_1/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d_1/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="concatenate_1/concat" output_port_id="concatenate_1/concat:0" />
+		<IR name="concatenate_1/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concatenate_1/concat" output_port_id="concatenate_1/concat:0" />
+		<IR name="concatenate_1/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_3_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_3_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_3_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_bn/batchnorm/add_1" output_port_id="conv_dw_pred_3_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_3_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_3_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_3_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_bn/batchnorm/add_1" output_port_id="conv_dw_pred_3_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="predict_conv_3/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="predict_conv_3/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D" output_port_id="predict_conv_3/Conv2D:0" />
+		<IR name="predict_conv_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D" output_port_id="predict_conv_3/Conv2D:0" />
+		<IR name="predict_conv_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_2_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_2_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_2_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_bn/batchnorm/add_1" output_port_id="conv_dw_pred_2_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="predict_conv_2/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="predict_conv_2/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D" output_port_id="predict_conv_2/Conv2D:0" />
+		<IR name="predict_conv_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D" output_port_id="predict_conv_2/Conv2D:0" />
+		<IR name="predict_conv_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_1_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_1_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_1_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_bn/batchnorm/add_1" output_port_id="conv_dw_pred_1_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="predict_conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="predict_conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D" output_port_id="predict_conv_1/Conv2D:0" />
+		<IR name="predict_conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D" output_port_id="predict_conv_1/Conv2D:0" />
+		<IR name="predict_conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+</mapping>

@@ -1,0 +1,2275 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="image_input" output_port_id="image_input:0" />
+		<IR name="image_input" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="image_input" output_port_id="image_input:0" />
+		<IR name="image_input" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1_bn/batchnorm/mul_1_copy" output_port_id="conv1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1/Conv2D/ReadVariableOp" output_port_id="conv1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1/Conv2D" output_port_id="conv1_bn/batchnorm/mul_1:0" />
+		<IR name="conv1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv1_bn/batchnorm/mul_1" output_port_id="conv1_bn/batchnorm/mul_1:0" />
+		<IR name="conv1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv1_bn/batchnorm/sub" output_port_id="conv1_bn/batchnorm/sub:0" />
+		<IR name="conv1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1_bn/batchnorm/sub" output_port_id="conv1_bn/batchnorm/sub:0" />
+		<IR name="conv1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1_bn/batchnorm/add_1" output_port_id="conv1_bn/batchnorm/add_1:0" />
+		<IR name="conv1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv1_bn/batchnorm/add_1" output_port_id="conv1_bn/batchnorm/add_1:0" />
+		<IR name="conv1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv1_relu/Relu6" output_port_id="conv1_relu/Relu6:0" />
+		<IR name="conv1_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv1_relu/Relu6" output_port_id="conv1_relu/Relu6:0" />
+		<IR name="conv1_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_1/depthwise/ReadVariableOp" output_port_id="conv_dw_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_1/depthwise" output_port_id="conv_dw_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_1/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_bn/batchnorm/mul_1" output_port_id="conv_dw_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_1/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_bn/batchnorm/sub" output_port_id="conv_dw_1_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_bn/batchnorm/sub" output_port_id="conv_dw_1_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_bn/batchnorm/add_1" output_port_id="conv_dw_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_bn/batchnorm/add_1" output_port_id="conv_dw_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_relu/Relu6" output_port_id="conv_dw_1_relu/Relu6:0" />
+		<IR name="conv_dw_1_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_1_relu/Relu6" output_port_id="conv_dw_1_relu/Relu6:0" />
+		<IR name="conv_dw_1_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_1/Conv2D/ReadVariableOp" output_port_id="conv_pw_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_1/Conv2D" output_port_id="conv_pw_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_bn/batchnorm/mul_1" output_port_id="conv_pw_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_bn/batchnorm/sub" output_port_id="conv_pw_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_bn/batchnorm/sub" output_port_id="conv_pw_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_bn/batchnorm/add_1" output_port_id="conv_pw_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_bn/batchnorm/add_1" output_port_id="conv_pw_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_relu/Relu6" output_port_id="conv_pw_1_relu/Relu6:0" />
+		<IR name="conv_pw_1_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_1_relu/Relu6" output_port_id="conv_pw_1_relu/Relu6:0" />
+		<IR name="conv_pw_1_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_2/depthwise/ReadVariableOp" output_port_id="conv_dw_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_2/depthwise" output_port_id="conv_dw_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_2/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_bn/batchnorm/mul_1" output_port_id="conv_dw_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_2/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_bn/batchnorm/sub" output_port_id="conv_dw_2_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_bn/batchnorm/sub" output_port_id="conv_dw_2_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_bn/batchnorm/add_1" output_port_id="conv_dw_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_bn/batchnorm/add_1" output_port_id="conv_dw_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_relu/Relu6" output_port_id="conv_dw_2_relu/Relu6:0" />
+		<IR name="conv_dw_2_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_2_relu/Relu6" output_port_id="conv_dw_2_relu/Relu6:0" />
+		<IR name="conv_dw_2_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_2/Conv2D/ReadVariableOp" output_port_id="conv_pw_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_2/Conv2D" output_port_id="conv_pw_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_bn/batchnorm/mul_1" output_port_id="conv_pw_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_bn/batchnorm/sub" output_port_id="conv_pw_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_bn/batchnorm/sub" output_port_id="conv_pw_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_bn/batchnorm/add_1" output_port_id="conv_pw_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_bn/batchnorm/add_1" output_port_id="conv_pw_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_relu/Relu6" output_port_id="conv_pw_2_relu/Relu6:0" />
+		<IR name="conv_pw_2_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_2_relu/Relu6" output_port_id="conv_pw_2_relu/Relu6:0" />
+		<IR name="conv_pw_2_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_3/depthwise/ReadVariableOp" output_port_id="conv_dw_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_3/depthwise" output_port_id="conv_dw_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_3/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_bn/batchnorm/mul_1" output_port_id="conv_dw_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_3/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_bn/batchnorm/sub" output_port_id="conv_dw_3_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_bn/batchnorm/sub" output_port_id="conv_dw_3_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_bn/batchnorm/add_1" output_port_id="conv_dw_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_bn/batchnorm/add_1" output_port_id="conv_dw_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_relu/Relu6" output_port_id="conv_dw_3_relu/Relu6:0" />
+		<IR name="conv_dw_3_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_3_relu/Relu6" output_port_id="conv_dw_3_relu/Relu6:0" />
+		<IR name="conv_dw_3_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_3/Conv2D/ReadVariableOp" output_port_id="conv_pw_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_3/Conv2D" output_port_id="conv_pw_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_bn/batchnorm/mul_1" output_port_id="conv_pw_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_bn/batchnorm/sub" output_port_id="conv_pw_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_bn/batchnorm/sub" output_port_id="conv_pw_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_bn/batchnorm/add_1" output_port_id="conv_pw_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_bn/batchnorm/add_1" output_port_id="conv_pw_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_relu/Relu6" output_port_id="conv_pw_3_relu/Relu6:0" />
+		<IR name="conv_pw_3_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_3_relu/Relu6" output_port_id="conv_pw_3_relu/Relu6:0" />
+		<IR name="conv_pw_3_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_4/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_4_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_4/depthwise/ReadVariableOp" output_port_id="conv_dw_4/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_4_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_4/depthwise" output_port_id="conv_dw_4_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_4/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_bn/batchnorm/mul_1" output_port_id="conv_dw_4_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_4/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_bn/batchnorm/sub" output_port_id="conv_dw_4_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_4_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_bn/batchnorm/sub" output_port_id="conv_dw_4_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_4_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_bn/batchnorm/add_1" output_port_id="conv_dw_4_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_4_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_bn/batchnorm/add_1" output_port_id="conv_dw_4_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_4_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_relu/Relu6" output_port_id="conv_dw_4_relu/Relu6:0" />
+		<IR name="conv_dw_4_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_4_relu/Relu6" output_port_id="conv_dw_4_relu/Relu6:0" />
+		<IR name="conv_dw_4_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_4/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_4_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_4/Conv2D/ReadVariableOp" output_port_id="conv_pw_4/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_4_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_4/Conv2D" output_port_id="conv_pw_4_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_4/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_bn/batchnorm/mul_1" output_port_id="conv_pw_4_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_4/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_bn/batchnorm/sub" output_port_id="conv_pw_4_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_4_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_bn/batchnorm/sub" output_port_id="conv_pw_4_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_4_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_bn/batchnorm/add_1" output_port_id="conv_pw_4_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_4_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_bn/batchnorm/add_1" output_port_id="conv_pw_4_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_4_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_relu/Relu6" output_port_id="conv_pw_4_relu/Relu6:0" />
+		<IR name="conv_pw_4_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_4_relu/Relu6" output_port_id="conv_pw_4_relu/Relu6:0" />
+		<IR name="conv_pw_4_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_5/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_5_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_5/depthwise/ReadVariableOp" output_port_id="conv_dw_5/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_5_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_5/depthwise" output_port_id="conv_dw_5_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_5/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_bn/batchnorm/mul_1" output_port_id="conv_dw_5_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_5/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_bn/batchnorm/sub" output_port_id="conv_dw_5_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_5_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_bn/batchnorm/sub" output_port_id="conv_dw_5_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_5_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_bn/batchnorm/add_1" output_port_id="conv_dw_5_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_5_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_bn/batchnorm/add_1" output_port_id="conv_dw_5_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_5_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_relu/Relu6" output_port_id="conv_dw_5_relu/Relu6:0" />
+		<IR name="conv_dw_5_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_5_relu/Relu6" output_port_id="conv_dw_5_relu/Relu6:0" />
+		<IR name="conv_dw_5_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_5/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_5_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_5/Conv2D/ReadVariableOp" output_port_id="conv_pw_5/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_5_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_5/Conv2D" output_port_id="conv_pw_5_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_5/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_bn/batchnorm/mul_1" output_port_id="conv_pw_5_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_5/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_bn/batchnorm/sub" output_port_id="conv_pw_5_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_5_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_bn/batchnorm/sub" output_port_id="conv_pw_5_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_5_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_bn/batchnorm/add_1" output_port_id="conv_pw_5_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_5_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_bn/batchnorm/add_1" output_port_id="conv_pw_5_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_5_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_relu/Relu6" output_port_id="conv_pw_5_relu/Relu6:0" />
+		<IR name="conv_pw_5_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_relu/Relu6" output_port_id="conv_pw_5_relu/Relu6:0" />
+		<IR name="conv_pw_5_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_6/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_6_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_6/depthwise/ReadVariableOp" output_port_id="conv_dw_6/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_6_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_6/depthwise" output_port_id="conv_dw_6_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_6/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_bn/batchnorm/mul_1" output_port_id="conv_dw_6_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_6/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_bn/batchnorm/sub" output_port_id="conv_dw_6_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_6_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_bn/batchnorm/sub" output_port_id="conv_dw_6_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_6_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_bn/batchnorm/add_1" output_port_id="conv_dw_6_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_6_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_bn/batchnorm/add_1" output_port_id="conv_dw_6_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_6_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_relu/Relu6" output_port_id="conv_dw_6_relu/Relu6:0" />
+		<IR name="conv_dw_6_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_6_relu/Relu6" output_port_id="conv_dw_6_relu/Relu6:0" />
+		<IR name="conv_dw_6_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_6/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_6_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_6/Conv2D/ReadVariableOp" output_port_id="conv_pw_6/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_6_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_6/Conv2D" output_port_id="conv_pw_6_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_6/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_bn/batchnorm/mul_1" output_port_id="conv_pw_6_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_6/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_bn/batchnorm/sub" output_port_id="conv_pw_6_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_6_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_bn/batchnorm/sub" output_port_id="conv_pw_6_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_6_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_bn/batchnorm/add_1" output_port_id="conv_pw_6_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_6_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_bn/batchnorm/add_1" output_port_id="conv_pw_6_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_6_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_relu/Relu6" output_port_id="conv_pw_6_relu/Relu6:0" />
+		<IR name="conv_pw_6_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_6_relu/Relu6" output_port_id="conv_pw_6_relu/Relu6:0" />
+		<IR name="conv_pw_6_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_7/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_7_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_7/depthwise/ReadVariableOp" output_port_id="conv_dw_7/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_7_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_7/depthwise" output_port_id="conv_dw_7_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_7/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_bn/batchnorm/mul_1" output_port_id="conv_dw_7_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_7/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_bn/batchnorm/sub" output_port_id="conv_dw_7_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_7_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_bn/batchnorm/sub" output_port_id="conv_dw_7_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_7_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_bn/batchnorm/add_1" output_port_id="conv_dw_7_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_7_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_bn/batchnorm/add_1" output_port_id="conv_dw_7_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_7_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_relu/Relu6" output_port_id="conv_dw_7_relu/Relu6:0" />
+		<IR name="conv_dw_7_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_7_relu/Relu6" output_port_id="conv_dw_7_relu/Relu6:0" />
+		<IR name="conv_dw_7_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_7/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_7_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_7/Conv2D/ReadVariableOp" output_port_id="conv_pw_7/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_7_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_7/Conv2D" output_port_id="conv_pw_7_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_7/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_bn/batchnorm/mul_1" output_port_id="conv_pw_7_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_7/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_bn/batchnorm/sub" output_port_id="conv_pw_7_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_7_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_bn/batchnorm/sub" output_port_id="conv_pw_7_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_7_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_bn/batchnorm/add_1" output_port_id="conv_pw_7_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_7_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_bn/batchnorm/add_1" output_port_id="conv_pw_7_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_7_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_relu/Relu6" output_port_id="conv_pw_7_relu/Relu6:0" />
+		<IR name="conv_pw_7_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_7_relu/Relu6" output_port_id="conv_pw_7_relu/Relu6:0" />
+		<IR name="conv_pw_7_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_8/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_8_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_8/depthwise/ReadVariableOp" output_port_id="conv_dw_8/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_8_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_8/depthwise" output_port_id="conv_dw_8_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_8/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_bn/batchnorm/mul_1" output_port_id="conv_dw_8_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_8/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_bn/batchnorm/sub" output_port_id="conv_dw_8_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_8_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_bn/batchnorm/sub" output_port_id="conv_dw_8_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_8_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_bn/batchnorm/add_1" output_port_id="conv_dw_8_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_8_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_bn/batchnorm/add_1" output_port_id="conv_dw_8_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_8_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_relu/Relu6" output_port_id="conv_dw_8_relu/Relu6:0" />
+		<IR name="conv_dw_8_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_8_relu/Relu6" output_port_id="conv_dw_8_relu/Relu6:0" />
+		<IR name="conv_dw_8_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_8/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_8_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_8/Conv2D/ReadVariableOp" output_port_id="conv_pw_8/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_8_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_8/Conv2D" output_port_id="conv_pw_8_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_8/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_bn/batchnorm/mul_1" output_port_id="conv_pw_8_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_8/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_bn/batchnorm/sub" output_port_id="conv_pw_8_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_8_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_bn/batchnorm/sub" output_port_id="conv_pw_8_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_8_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_bn/batchnorm/add_1" output_port_id="conv_pw_8_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_8_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_bn/batchnorm/add_1" output_port_id="conv_pw_8_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_8_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_relu/Relu6" output_port_id="conv_pw_8_relu/Relu6:0" />
+		<IR name="conv_pw_8_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_8_relu/Relu6" output_port_id="conv_pw_8_relu/Relu6:0" />
+		<IR name="conv_pw_8_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_9/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_9_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_9/depthwise/ReadVariableOp" output_port_id="conv_dw_9/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_9_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_9/depthwise" output_port_id="conv_dw_9_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_9/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_bn/batchnorm/mul_1" output_port_id="conv_dw_9_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_9/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_bn/batchnorm/sub" output_port_id="conv_dw_9_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_9_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_bn/batchnorm/sub" output_port_id="conv_dw_9_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_9_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_bn/batchnorm/add_1" output_port_id="conv_dw_9_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_9_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_bn/batchnorm/add_1" output_port_id="conv_dw_9_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_9_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_relu/Relu6" output_port_id="conv_dw_9_relu/Relu6:0" />
+		<IR name="conv_dw_9_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_9_relu/Relu6" output_port_id="conv_dw_9_relu/Relu6:0" />
+		<IR name="conv_dw_9_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_9/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_9_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_9/Conv2D/ReadVariableOp" output_port_id="conv_pw_9/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_9_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_9/Conv2D" output_port_id="conv_pw_9_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_9/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_bn/batchnorm/mul_1" output_port_id="conv_pw_9_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_9/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_bn/batchnorm/sub" output_port_id="conv_pw_9_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_9_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_bn/batchnorm/sub" output_port_id="conv_pw_9_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_9_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_bn/batchnorm/add_1" output_port_id="conv_pw_9_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_9_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_bn/batchnorm/add_1" output_port_id="conv_pw_9_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_9_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_relu/Relu6" output_port_id="conv_pw_9_relu/Relu6:0" />
+		<IR name="conv_pw_9_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_9_relu/Relu6" output_port_id="conv_pw_9_relu/Relu6:0" />
+		<IR name="conv_pw_9_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_10/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_10_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_10/depthwise/ReadVariableOp" output_port_id="conv_dw_10/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_10_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_10/depthwise" output_port_id="conv_dw_10_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_10/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_bn/batchnorm/mul_1" output_port_id="conv_dw_10_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_10/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_bn/batchnorm/sub" output_port_id="conv_dw_10_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_10_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_bn/batchnorm/sub" output_port_id="conv_dw_10_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_10_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_bn/batchnorm/add_1" output_port_id="conv_dw_10_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_10_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_bn/batchnorm/add_1" output_port_id="conv_dw_10_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_10_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_relu/Relu6" output_port_id="conv_dw_10_relu/Relu6:0" />
+		<IR name="conv_dw_10_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_10_relu/Relu6" output_port_id="conv_dw_10_relu/Relu6:0" />
+		<IR name="conv_dw_10_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_10/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_10_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_10/Conv2D/ReadVariableOp" output_port_id="conv_pw_10/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_10_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_10/Conv2D" output_port_id="conv_pw_10_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_10/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_bn/batchnorm/mul_1" output_port_id="conv_pw_10_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_10/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_bn/batchnorm/sub" output_port_id="conv_pw_10_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_10_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_bn/batchnorm/sub" output_port_id="conv_pw_10_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_10_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_bn/batchnorm/add_1" output_port_id="conv_pw_10_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_10_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_bn/batchnorm/add_1" output_port_id="conv_pw_10_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_10_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_relu/Relu6" output_port_id="conv_pw_10_relu/Relu6:0" />
+		<IR name="conv_pw_10_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_10_relu/Relu6" output_port_id="conv_pw_10_relu/Relu6:0" />
+		<IR name="conv_pw_10_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_11/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_11_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_11/depthwise/ReadVariableOp" output_port_id="conv_dw_11/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_11_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_11/depthwise" output_port_id="conv_dw_11_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_11/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_bn/batchnorm/mul_1" output_port_id="conv_dw_11_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_11/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_bn/batchnorm/sub" output_port_id="conv_dw_11_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_11_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_bn/batchnorm/sub" output_port_id="conv_dw_11_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_11_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_bn/batchnorm/add_1" output_port_id="conv_dw_11_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_11_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_bn/batchnorm/add_1" output_port_id="conv_dw_11_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_11_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_relu/Relu6" output_port_id="conv_dw_11_relu/Relu6:0" />
+		<IR name="conv_dw_11_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_11_relu/Relu6" output_port_id="conv_dw_11_relu/Relu6:0" />
+		<IR name="conv_dw_11_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_11/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_11_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_11/Conv2D/ReadVariableOp" output_port_id="conv_pw_11/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_11_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_11/Conv2D" output_port_id="conv_pw_11_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_11/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_bn/batchnorm/mul_1" output_port_id="conv_pw_11_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_11/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_bn/batchnorm/sub" output_port_id="conv_pw_11_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_11_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_bn/batchnorm/sub" output_port_id="conv_pw_11_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_11_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_bn/batchnorm/add_1" output_port_id="conv_pw_11_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_11_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_bn/batchnorm/add_1" output_port_id="conv_pw_11_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_11_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_relu/Relu6" output_port_id="conv_pw_11_relu/Relu6:0" />
+		<IR name="conv_pw_11_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_relu/Relu6" output_port_id="conv_pw_11_relu/Relu6:0" />
+		<IR name="conv_pw_11_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_12/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_12_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_12/depthwise/ReadVariableOp" output_port_id="conv_dw_12/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_12_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_12/depthwise" output_port_id="conv_dw_12_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_12/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_bn/batchnorm/mul_1" output_port_id="conv_dw_12_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_12/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_bn/batchnorm/sub" output_port_id="conv_dw_12_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_12_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_bn/batchnorm/sub" output_port_id="conv_dw_12_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_12_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_bn/batchnorm/add_1" output_port_id="conv_dw_12_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_12_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_bn/batchnorm/add_1" output_port_id="conv_dw_12_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_12_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_relu/Relu6" output_port_id="conv_dw_12_relu/Relu6:0" />
+		<IR name="conv_dw_12_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_12_relu/Relu6" output_port_id="conv_dw_12_relu/Relu6:0" />
+		<IR name="conv_dw_12_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_12/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_12_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_12/Conv2D/ReadVariableOp" output_port_id="conv_pw_12/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_12_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_12/Conv2D" output_port_id="conv_pw_12_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_12/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_bn/batchnorm/mul_1" output_port_id="conv_pw_12_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_12/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_bn/batchnorm/sub" output_port_id="conv_pw_12_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_12_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_bn/batchnorm/sub" output_port_id="conv_pw_12_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_12_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_bn/batchnorm/add_1" output_port_id="conv_pw_12_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_12_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_bn/batchnorm/add_1" output_port_id="conv_pw_12_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_12_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_relu/Relu6" output_port_id="conv_pw_12_relu/Relu6:0" />
+		<IR name="conv_pw_12_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_12_relu/Relu6" output_port_id="conv_pw_12_relu/Relu6:0" />
+		<IR name="conv_pw_12_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_bn/batchnorm/mul_1_copy" output_port_id="conv_dw_13/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_13_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_13/depthwise/ReadVariableOp" output_port_id="conv_dw_13/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_13_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_13/depthwise" output_port_id="conv_dw_13_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_13/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_bn/batchnorm/mul_1" output_port_id="conv_dw_13_bn/batchnorm/mul_1:0" />
+		<IR name="conv_dw_13/depthwise" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_bn/batchnorm/sub" output_port_id="conv_dw_13_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_13_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_bn/batchnorm/sub" output_port_id="conv_dw_13_bn/batchnorm/sub:0" />
+		<IR name="conv_dw_13_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_bn/batchnorm/add_1" output_port_id="conv_dw_13_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_13_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_bn/batchnorm/add_1" output_port_id="conv_dw_13_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_13_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_relu/Relu6" output_port_id="conv_dw_13_relu/Relu6:0" />
+		<IR name="conv_dw_13_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_13_relu/Relu6" output_port_id="conv_dw_13_relu/Relu6:0" />
+		<IR name="conv_dw_13_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_13/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_13_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_13/Conv2D/ReadVariableOp" output_port_id="conv_pw_13/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_13_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_13/Conv2D" output_port_id="conv_pw_13_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_13/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_bn/batchnorm/mul_1" output_port_id="conv_pw_13_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_13/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_bn/batchnorm/sub" output_port_id="conv_pw_13_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_13_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_bn/batchnorm/sub" output_port_id="conv_pw_13_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_13_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_bn/batchnorm/add_1" output_port_id="conv_pw_13_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_13_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_bn/batchnorm/add_1" output_port_id="conv_pw_13_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_13_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_relu/Relu6" output_port_id="conv_pw_13_relu/Relu6:0" />
+		<IR name="conv_pw_13_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_pw_13_relu/Relu6" output_port_id="conv_pw_13_relu/Relu6:0" />
+		<IR name="conv_pw_13_relu/Relu6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/mul_1_copy" output_port_id="conv2d/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D/ReadVariableOp" output_port_id="conv2d/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D" output_port_id="sync_batch_normalization/batchnorm/mul_1:0" />
+		<IR name="conv2d/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/mul_1" output_port_id="sync_batch_normalization/batchnorm/mul_1:0" />
+		<IR name="conv2d/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/sub" output_port_id="sync_batch_normalization/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/sub" output_port_id="sync_batch_normalization/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/add_1" output_port_id="sync_batch_normalization/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization/batchnorm/add_1" output_port_id="sync_batch_normalization/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu/LeakyRelu" output_port_id="leaky_re_lu/LeakyRelu:0" />
+		<IR name="leaky_re_lu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu/LeakyRelu" output_port_id="leaky_re_lu/LeakyRelu:0" />
+		<IR name="leaky_re_lu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_1_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_1_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_1_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_bn/batchnorm/add_1" output_port_id="conv_dw_pred_1_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_1_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_1_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_1_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_1_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1/Conv2D" output_port_id="conv_pw_pred_1_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_1_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_1_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_1_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/batchnorm/sub" output_port_id="conv_pw_pred_1_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_1_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/batchnorm/sub" output_port_id="conv_pw_pred_1_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_1_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/batchnorm/add_1" output_port_id="conv_pw_pred_1_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_1_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/batchnorm/add_1" output_port_id="conv_pw_pred_1_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_1_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_1_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_1_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_1_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/mul_1_copy" output_port_id="conv2d_1/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D/ReadVariableOp" output_port_id="conv2d_1/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D" output_port_id="sync_batch_normalization_1/batchnorm/mul_1:0" />
+		<IR name="conv2d_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/mul_1" output_port_id="sync_batch_normalization_1/batchnorm/mul_1:0" />
+		<IR name="conv2d_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/sub" output_port_id="sync_batch_normalization_1/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/sub" output_port_id="sync_batch_normalization_1/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="sync_batch_normalization_1/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="sync_batch_normalization_1/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_1/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_1/LeakyRelu" output_port_id="leaky_re_lu_1/LeakyRelu:0" />
+		<IR name="leaky_re_lu_1/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_1/LeakyRelu" output_port_id="leaky_re_lu_1/LeakyRelu:0" />
+		<IR name="leaky_re_lu_1/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_1_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_1_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_1_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_2/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2_bn/batchnorm/add_1" output_port_id="conv_dw_pred_1_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_2/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_1_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_1_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_1_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_1_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2/Conv2D" output_port_id="conv_pw_pred_1_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_1_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_1_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_1_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/batchnorm/sub" output_port_id="conv_pw_pred_1_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_1_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/batchnorm/sub" output_port_id="conv_pw_pred_1_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_1_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/batchnorm/add_1" output_port_id="conv_pw_pred_1_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_1_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/batchnorm/add_1" output_port_id="conv_pw_pred_1_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_1_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_1_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_1_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_1_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_2/batchnorm/mul_1_copy" output_port_id="conv2d_2/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_2/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_2/Conv2D/ReadVariableOp" output_port_id="conv2d_2/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_2/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_2/Conv2D" output_port_id="sync_batch_normalization_2/batchnorm/mul_1:0" />
+		<IR name="conv2d_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_2/batchnorm/mul_1" output_port_id="sync_batch_normalization_2/batchnorm/mul_1:0" />
+		<IR name="conv2d_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_2/batchnorm/sub" output_port_id="sync_batch_normalization_2/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_2/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_2/batchnorm/sub" output_port_id="sync_batch_normalization_2/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_2/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_2/batchnorm/add_1" output_port_id="sync_batch_normalization_2/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_2/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_2/batchnorm/add_1" output_port_id="sync_batch_normalization_2/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_2/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_2/LeakyRelu" output_port_id="leaky_re_lu_2/LeakyRelu:0" />
+		<IR name="leaky_re_lu_2/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_2/LeakyRelu" output_port_id="leaky_re_lu_2/LeakyRelu:0" />
+		<IR name="leaky_re_lu_2/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_3/batchnorm/mul_1_copy" output_port_id="conv2d_3/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_3/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_3/Conv2D/ReadVariableOp" output_port_id="conv2d_3/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_3/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_3/Conv2D" output_port_id="sync_batch_normalization_3/batchnorm/mul_1:0" />
+		<IR name="conv2d_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_3/batchnorm/mul_1" output_port_id="sync_batch_normalization_3/batchnorm/mul_1:0" />
+		<IR name="conv2d_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_3/batchnorm/sub" output_port_id="sync_batch_normalization_3/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_3/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_3/batchnorm/sub" output_port_id="sync_batch_normalization_3/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_3/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_3/batchnorm/add_1" output_port_id="sync_batch_normalization_3/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_3/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_3/batchnorm/add_1" output_port_id="sync_batch_normalization_3/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_3/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_3/LeakyRelu" output_port_id="leaky_re_lu_3/LeakyRelu:0" />
+		<IR name="leaky_re_lu_3/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_3/LeakyRelu" output_port_id="leaky_re_lu_3/LeakyRelu:0" />
+		<IR name="leaky_re_lu_3/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_11_relu/Relu6/Shape/Gathered" output_port_id="up_sampling2d/mul:0" />
+		<IR name="conv_pw_11_relu/Relu6/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d/mul" output_port_id="up_sampling2d/mul:0" />
+		<IR name="conv_pw_11_relu/Relu6/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="concatenate/concat" output_port_id="concatenate/concat:0" />
+		<IR name="concatenate/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concatenate/concat" output_port_id="concatenate/concat:0" />
+		<IR name="concatenate/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_4/batchnorm/mul_1_copy" output_port_id="conv2d_4/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_4/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_4/Conv2D/ReadVariableOp" output_port_id="conv2d_4/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_4/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_4/Conv2D" output_port_id="sync_batch_normalization_4/batchnorm/mul_1:0" />
+		<IR name="conv2d_4/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_4/batchnorm/mul_1" output_port_id="sync_batch_normalization_4/batchnorm/mul_1:0" />
+		<IR name="conv2d_4/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_4/batchnorm/sub" output_port_id="sync_batch_normalization_4/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_4/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_4/batchnorm/sub" output_port_id="sync_batch_normalization_4/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_4/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_4/batchnorm/add_1" output_port_id="sync_batch_normalization_4/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_4/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_4/batchnorm/add_1" output_port_id="sync_batch_normalization_4/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_4/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_4/LeakyRelu" output_port_id="leaky_re_lu_4/LeakyRelu:0" />
+		<IR name="leaky_re_lu_4/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_4/LeakyRelu" output_port_id="leaky_re_lu_4/LeakyRelu:0" />
+		<IR name="leaky_re_lu_4/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_2_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_2_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_2_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_bn/batchnorm/add_1" output_port_id="conv_dw_pred_2_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_2_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_2_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_2_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_2_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1/Conv2D" output_port_id="conv_pw_pred_2_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_2_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_2_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_2_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/batchnorm/sub" output_port_id="conv_pw_pred_2_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_2_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/batchnorm/sub" output_port_id="conv_pw_pred_2_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_2_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/batchnorm/add_1" output_port_id="conv_pw_pred_2_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_2_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/batchnorm/add_1" output_port_id="conv_pw_pred_2_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_2_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_2_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_2_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_2_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_5/batchnorm/mul_1_copy" output_port_id="conv2d_5/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_5/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_5/Conv2D/ReadVariableOp" output_port_id="conv2d_5/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_5/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_5/Conv2D" output_port_id="sync_batch_normalization_5/batchnorm/mul_1:0" />
+		<IR name="conv2d_5/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_5/batchnorm/mul_1" output_port_id="sync_batch_normalization_5/batchnorm/mul_1:0" />
+		<IR name="conv2d_5/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_5/batchnorm/sub" output_port_id="sync_batch_normalization_5/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_5/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_5/batchnorm/sub" output_port_id="sync_batch_normalization_5/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_5/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_5/batchnorm/add_1" output_port_id="sync_batch_normalization_5/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_5/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_5/batchnorm/add_1" output_port_id="sync_batch_normalization_5/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_5/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_5/LeakyRelu" output_port_id="leaky_re_lu_5/LeakyRelu:0" />
+		<IR name="leaky_re_lu_5/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_5/LeakyRelu" output_port_id="leaky_re_lu_5/LeakyRelu:0" />
+		<IR name="leaky_re_lu_5/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_2_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_2_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_2_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_2/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2_bn/batchnorm/add_1" output_port_id="conv_dw_pred_2_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_2/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_2_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_2_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_2_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_2_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2/Conv2D" output_port_id="conv_pw_pred_2_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_2_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_2_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_2_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/batchnorm/sub" output_port_id="conv_pw_pred_2_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_2_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/batchnorm/sub" output_port_id="conv_pw_pred_2_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_2_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/batchnorm/add_1" output_port_id="conv_pw_pred_2_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_2_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/batchnorm/add_1" output_port_id="conv_pw_pred_2_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_2_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_2_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_2_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_2_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_6/batchnorm/mul_1_copy" output_port_id="conv2d_6/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_6/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_6/Conv2D/ReadVariableOp" output_port_id="conv2d_6/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_6/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_6/Conv2D" output_port_id="sync_batch_normalization_6/batchnorm/mul_1:0" />
+		<IR name="conv2d_6/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_6/batchnorm/mul_1" output_port_id="sync_batch_normalization_6/batchnorm/mul_1:0" />
+		<IR name="conv2d_6/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_6/batchnorm/sub" output_port_id="sync_batch_normalization_6/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_6/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_6/batchnorm/sub" output_port_id="sync_batch_normalization_6/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_6/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_6/batchnorm/add_1" output_port_id="sync_batch_normalization_6/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_6/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_6/batchnorm/add_1" output_port_id="sync_batch_normalization_6/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_6/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_6/LeakyRelu" output_port_id="leaky_re_lu_6/LeakyRelu:0" />
+		<IR name="leaky_re_lu_6/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_6/LeakyRelu" output_port_id="leaky_re_lu_6/LeakyRelu:0" />
+		<IR name="leaky_re_lu_6/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_7/batchnorm/mul_1_copy" output_port_id="conv2d_7/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_7/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_7/Conv2D/ReadVariableOp" output_port_id="conv2d_7/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_7/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_7/Conv2D" output_port_id="sync_batch_normalization_7/batchnorm/mul_1:0" />
+		<IR name="conv2d_7/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_7/batchnorm/mul_1" output_port_id="sync_batch_normalization_7/batchnorm/mul_1:0" />
+		<IR name="conv2d_7/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_7/batchnorm/sub" output_port_id="sync_batch_normalization_7/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_7/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_7/batchnorm/sub" output_port_id="sync_batch_normalization_7/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_7/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_7/batchnorm/add_1" output_port_id="sync_batch_normalization_7/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_7/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_7/batchnorm/add_1" output_port_id="sync_batch_normalization_7/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_7/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_7/LeakyRelu" output_port_id="leaky_re_lu_7/LeakyRelu:0" />
+		<IR name="leaky_re_lu_7/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_7/LeakyRelu" output_port_id="leaky_re_lu_7/LeakyRelu:0" />
+		<IR name="leaky_re_lu_7/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_5_relu/Relu6/Shape/Gathered" output_port_id="up_sampling2d_1/mul:0" />
+		<IR name="conv_pw_5_relu/Relu6/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/mul" output_port_id="up_sampling2d_1/mul:0" />
+		<IR name="conv_pw_5_relu/Relu6/Shape/Gathered" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d_1/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="up_sampling2d_1/resize/ResizeNearestNeighbor:0" />
+		<IR name="up_sampling2d_1/resize/ResizeNearestNeighbor" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="concatenate_1/concat" output_port_id="concatenate_1/concat:0" />
+		<IR name="concatenate_1/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concatenate_1/concat" output_port_id="concatenate_1/concat:0" />
+		<IR name="concatenate_1/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_8/batchnorm/mul_1_copy" output_port_id="conv2d_8/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_8/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_8/Conv2D/ReadVariableOp" output_port_id="conv2d_8/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_8/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_8/Conv2D" output_port_id="sync_batch_normalization_8/batchnorm/mul_1:0" />
+		<IR name="conv2d_8/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_8/batchnorm/mul_1" output_port_id="sync_batch_normalization_8/batchnorm/mul_1:0" />
+		<IR name="conv2d_8/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_8/batchnorm/sub" output_port_id="sync_batch_normalization_8/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_8/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_8/batchnorm/sub" output_port_id="sync_batch_normalization_8/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_8/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_8/batchnorm/add_1" output_port_id="sync_batch_normalization_8/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_8/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_8/batchnorm/add_1" output_port_id="sync_batch_normalization_8/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_8/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_8/LeakyRelu" output_port_id="leaky_re_lu_8/LeakyRelu:0" />
+		<IR name="leaky_re_lu_8/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_8/LeakyRelu" output_port_id="leaky_re_lu_8/LeakyRelu:0" />
+		<IR name="leaky_re_lu_8/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_3_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_3_1/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_1_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_3_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_bn/batchnorm/add_1" output_port_id="conv_dw_pred_3_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_3_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_3_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_3_1/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_3_1_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1/Conv2D" output_port_id="conv_pw_pred_3_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_3_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_3_1_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_3_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/batchnorm/sub" output_port_id="conv_pw_pred_3_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_3_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/batchnorm/sub" output_port_id="conv_pw_pred_3_1_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_3_1_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/batchnorm/add_1" output_port_id="conv_pw_pred_3_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_3_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/batchnorm/add_1" output_port_id="conv_pw_pred_3_1_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_3_1_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_3_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_3_1_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_3_1_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_9/batchnorm/mul_1_copy" output_port_id="conv2d_9/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_9/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_9/Conv2D/ReadVariableOp" output_port_id="conv2d_9/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_9/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_9/Conv2D" output_port_id="sync_batch_normalization_9/batchnorm/mul_1:0" />
+		<IR name="conv2d_9/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_9/batchnorm/mul_1" output_port_id="sync_batch_normalization_9/batchnorm/mul_1:0" />
+		<IR name="conv2d_9/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_9/batchnorm/sub" output_port_id="sync_batch_normalization_9/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_9/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_9/batchnorm/sub" output_port_id="sync_batch_normalization_9/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_9/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_9/batchnorm/add_1" output_port_id="sync_batch_normalization_9/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_9/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_9/batchnorm/add_1" output_port_id="sync_batch_normalization_9/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_9/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_9/LeakyRelu" output_port_id="leaky_re_lu_9/LeakyRelu:0" />
+		<IR name="leaky_re_lu_9/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_9/LeakyRelu" output_port_id="leaky_re_lu_9/LeakyRelu:0" />
+		<IR name="leaky_re_lu_9/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_3_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_3_2/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_2_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_3_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_2/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2_bn/batchnorm/add_1" output_port_id="conv_dw_pred_3_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_2/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_3_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_3_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_3_2/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_3_2_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2/Conv2D" output_port_id="conv_pw_pred_3_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_3_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_3_2_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_3_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/batchnorm/sub" output_port_id="conv_pw_pred_3_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_3_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/batchnorm/sub" output_port_id="conv_pw_pred_3_2_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_3_2_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/batchnorm/add_1" output_port_id="conv_pw_pred_3_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_3_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/batchnorm/add_1" output_port_id="conv_pw_pred_3_2_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_3_2_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_3_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_3_2_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_3_2_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_10/batchnorm/mul_1_copy" output_port_id="conv2d_10/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_10/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_10/Conv2D/ReadVariableOp" output_port_id="conv2d_10/Conv2D/ReadVariableOp:0" />
+		<IR name="sync_batch_normalization_10/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv2d_10/Conv2D" output_port_id="sync_batch_normalization_10/batchnorm/mul_1:0" />
+		<IR name="conv2d_10/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_10/batchnorm/mul_1" output_port_id="sync_batch_normalization_10/batchnorm/mul_1:0" />
+		<IR name="conv2d_10/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_10/batchnorm/sub" output_port_id="sync_batch_normalization_10/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_10/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_10/batchnorm/sub" output_port_id="sync_batch_normalization_10/batchnorm/sub:0" />
+		<IR name="sync_batch_normalization_10/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_10/batchnorm/add_1" output_port_id="sync_batch_normalization_10/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_10/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="sync_batch_normalization_10/batchnorm/add_1" output_port_id="sync_batch_normalization_10/batchnorm/add_1:0" />
+		<IR name="sync_batch_normalization_10/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_10/LeakyRelu" output_port_id="leaky_re_lu_10/LeakyRelu:0" />
+		<IR name="leaky_re_lu_10/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="leaky_re_lu_10/LeakyRelu" output_port_id="leaky_re_lu_10/LeakyRelu:0" />
+		<IR name="leaky_re_lu_10/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_3_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_3_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_3_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_3_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_bn/batchnorm/add_1" output_port_id="conv_dw_pred_3_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_3_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_3_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_3_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_3_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_3_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3/Conv2D" output_port_id="conv_pw_pred_3_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_3_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_3_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_3_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/batchnorm/sub" output_port_id="conv_pw_pred_3_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_3_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/batchnorm/sub" output_port_id="conv_pw_pred_3_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_3_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/batchnorm/add_1" output_port_id="conv_pw_pred_3_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_3_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/batchnorm/add_1" output_port_id="conv_pw_pred_3_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_3_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_3_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_3_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_3_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="predict_conv_3/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="predict_conv_3/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_3/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D" output_port_id="predict_conv_3/Conv2D:0" />
+		<IR name="predict_conv_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D" output_port_id="predict_conv_3/Conv2D:0" />
+		<IR name="predict_conv_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/YoloRegion" output_port_id="predict_conv_3/Conv2D/YoloRegion" />
+		<IR name="predict_conv_3/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_2_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_2_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_2_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_2_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_bn/batchnorm/add_1" output_port_id="conv_dw_pred_2_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_2_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_2_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_2_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_2_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_2_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3/Conv2D" output_port_id="conv_pw_pred_2_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_2_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_2_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_2_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/batchnorm/sub" output_port_id="conv_pw_pred_2_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_2_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/batchnorm/sub" output_port_id="conv_pw_pred_2_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_2_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/batchnorm/add_1" output_port_id="conv_pw_pred_2_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_2_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/batchnorm/add_1" output_port_id="conv_pw_pred_2_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_2_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_2_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_2_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_2_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="predict_conv_2/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="predict_conv_2/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_2/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D" output_port_id="predict_conv_2/Conv2D:0" />
+		<IR name="predict_conv_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D" output_port_id="predict_conv_2/Conv2D:0" />
+		<IR name="predict_conv_2/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/YoloRegion" output_port_id="predict_conv_2/Conv2D/YoloRegion" />
+		<IR name="predict_conv_2/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="conv_dw_pred_1_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3/depthwise/ReadVariableOp" output_port_id="conv_dw_pred_1_3/depthwise/ReadVariableOp:0" />
+		<IR name="conv_dw_pred_1_3_bn/batchnorm/mul_1/Fused_Mul__copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" output_port_id="conv_dw_pred_1_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_bn/batchnorm/add_1" output_port_id="conv_dw_pred_1_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="conv_dw_pred_1_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/batchnorm/mul_1_copy" output_port_id="conv_pw_pred_1_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_1_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3/Conv2D/ReadVariableOp" output_port_id="conv_pw_pred_1_3/Conv2D/ReadVariableOp:0" />
+		<IR name="conv_pw_pred_1_3_bn/batchnorm/mul_1_copy" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3/Conv2D" output_port_id="conv_pw_pred_1_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_1_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/batchnorm/mul_1" output_port_id="conv_pw_pred_1_3_bn/batchnorm/mul_1:0" />
+		<IR name="conv_pw_pred_1_3/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/batchnorm/sub" output_port_id="conv_pw_pred_1_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_1_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/batchnorm/sub" output_port_id="conv_pw_pred_1_3_bn/batchnorm/sub:0" />
+		<IR name="conv_pw_pred_1_3_bn/batchnorm/sub" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/batchnorm/add_1" output_port_id="conv_pw_pred_1_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_1_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/batchnorm/add_1" output_port_id="conv_pw_pred_1_3_bn/batchnorm/add_1:0" />
+		<IR name="conv_pw_pred_1_3_bn/batchnorm/add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_1_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="conv_pw_pred_1_3_leaky_relu/LeakyRelu:0" />
+		<IR name="conv_pw_pred_1_3_leaky_relu/LeakyRelu" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="predict_conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="predict_conv_1/Conv2D/ReadVariableOp:0" />
+		<IR name="predict_conv_1/Conv2D/ReadVariableOp" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D" output_port_id="predict_conv_1/Conv2D:0" />
+		<IR name="predict_conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D" output_port_id="predict_conv_1/Conv2D:0" />
+		<IR name="predict_conv_1/Conv2D" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion:0" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/YoloRegion" output_port_id="predict_conv_1/Conv2D/YoloRegion" />
+		<IR name="predict_conv_1/Conv2D/YoloRegion" output_port_id="1" />
+	</map>
+</mapping>
