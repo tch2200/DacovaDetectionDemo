@@ -2,6 +2,7 @@
 # -*- coding=utf-8 -*-
 import numpy as np
 import copy
+from scipy.special import expit, softmax
 
 def detection_decode(
     prediction, anchors, num_classes, input_shape, scale_x_y=None, use_softmax=False
@@ -19,7 +20,6 @@ def detection_decode(
     grid_shape = np.shape(prediction)[1:3]
     if input_shape[0] // grid_shape[0] != input_shape[1] // grid_shape[1]:
         grid_shape = np.shape(prediction)[2:4]
-
     # check if stride on height & width are same
     assert (
         input_shape[0] // grid_shape[0] == input_shape[1] // grid_shape[1]
@@ -51,20 +51,25 @@ def detection_decode(
     anchors = np.expand_dims(anchors, 0)
 
     if scale_x_y:  # not use
-        box_xy_tmp = prediction[..., :2] * scale_x_y - (scale_x_y - 1) / 2
+        box_xy_tmp = expit(prediction[..., :2]) * scale_x_y - (scale_x_y - 1) / 2
         box_xy = (box_xy_tmp + x_y_offset) / np.array(grid_shape)[::-1]
     else:
-        box_xy = (prediction[..., :2] + x_y_offset) / np.array(grid_shape)[::-1]
+        box_xy = (expit(prediction[..., :2]) + x_y_offset) / np.array(grid_shape)[::-1]
 
     box_wh = (np.exp(prediction[..., 2:4]) * anchors) / np.array(input_shape)[::-1]
 
     # Sigmoid objectness scores
-    objectness = prediction[..., 4]  # p_o (objectness score)
+    objectness = expit(prediction[..., 4])  # p_o (objectness score)
     objectness = np.expand_dims(
         objectness, -1
     )  # To make the same number of values for axis 0 and 1
 
-    class_scores = prediction[..., 5:]
+    if use_softmax:
+        # Softmax class scores
+        class_scores = softmax(prediction[..., 5:], axis=-1)
+    else:
+        # Sigmoid class scores
+        class_scores = expit(prediction[..., 5:])
     out = np.concatenate([box_xy, box_wh, objectness, class_scores], axis=2)
 
     return out

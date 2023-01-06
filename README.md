@@ -1,18 +1,18 @@
-# Demo DacovaDetection
+# Demo DacovaDetection for OpenVino
 
-## Download original weight to folder:
+## Create and Export trained model to folder:
 ```
-mkdir samples/weights/tf
-cd samples/weights/tf
+mkdir samples/weights/openvino
+cd samples/weights/openvino
 ```
 ## Build docker
 ```
-docker build cpp -t openvino_detection
+docker build openvino_cpp -t openvino_detection
 docker run -it --rm -v $(pwd):/dacovadetection-openvino openvino_detection
 ```
 ## To compile in docker
 ```
-cd cpp
+cd openvino_cpp
 mkdir build 
 cd build
 cmake ../ -O ./

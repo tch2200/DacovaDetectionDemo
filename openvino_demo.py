@@ -33,7 +33,7 @@ class INFER(object):
             326.0,
         ]
         self.colors = None
-        self.score = 0.1
+        self.score = 0.5
         self.iou = 0.4
         self.elim_grid_sense = False
         self._generate_model()

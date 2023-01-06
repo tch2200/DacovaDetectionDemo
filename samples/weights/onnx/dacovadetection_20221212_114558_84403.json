@@ -1,0 +1,1 @@
+{"model_config": {"model_type": "Medium", "image_size": [960, 960, 3], "batch_size": 4, "minimumEpochs": 10, "class_name": ["__ignore__", "large", "middle", "small"], "minWidth": 0, "minHeight": 0, "probability": 0.2, "iou": 0.2}}
