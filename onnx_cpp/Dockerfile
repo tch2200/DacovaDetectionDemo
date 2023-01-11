@@ -126,3 +126,5 @@ RUN cd /tmp && \
     make install && \
     pip install dist/*
 RUN rm -rf /tmp/*
+
+WORKDIR /onnx_detection

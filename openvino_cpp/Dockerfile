@@ -6,4 +6,4 @@ USER root
 
 RUN cd /opt/intel/openvino/extras/scripts/ && sh download_opencv.sh
 
-WORKDIR /dacovadetection-openvino
+WORKDIR /openvino_detection
