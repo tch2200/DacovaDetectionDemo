@@ -4,7 +4,7 @@ import cv2
 import json
 from pathlib import Path
 from PIL import Image
-from timeit import default_timer as timer
+import time
 from common.postprocess_np import detection_postprocess_np
 from common.data_utils import image_preprocessing
 from common.utils import get_colors, draw_boxes
@@ -122,11 +122,10 @@ if __name__ == "__main__":
     if not camera_read.isOpened():
         raise IOError("Couldn't open webcam")
 
-    accum_time = 0
     curr_fps = 0
-    fps = "FPS: "
-    prev_time = timer()
-
+    fps = 0.0
+    tic = time.time()
+    
     while True:        
         ret, frame = camera_read.read()
         if ret != True:
@@ -136,18 +135,15 @@ if __name__ == "__main__":
         image, _, _, _ = detect.detect_image(image)
 
         result = np.asarray(image)
-        curr_time = timer()
-        exec_time = curr_time - prev_time
-        prev_time = curr_time
-        accum_time = accum_time + exec_time
-        curr_fps = curr_fps + 1
+        
+        toc = time.time()
+        curr_fps = 1.0/(toc-tic)
+        # Calculate an exponentially decaying average of fps number
+        fps = curr_fps if fps == 0.0 else (fps*0.95 + curr_fps*0.05)
+        tic = toc
+        fps_ = 'FPS: {:.2f}'.format(fps)
 
-        if accum_time > 1:
-            accum_time = accum_time - 1
-            fps = "FPS: " + str(curr_fps)
-            curr_fps = 0
-
-        cv2.putText(result, text=fps, org=(5, 20), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+        cv2.putText(result, text=fps_, org=(5, 20), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
                     fontScale=0.50, color=(150, 143, 0), thickness=2)
         
         cv2.imshow("DacovaDetection", result)
